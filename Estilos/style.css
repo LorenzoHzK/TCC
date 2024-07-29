@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Noto Sans", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Montserrat", sans-serif;*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+/*Header*/
+
+header{
+    height: 69px;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+}
+
+.logo{
+    height: 25px;
+    margin-left: 25px;
+}
+
+header > ul{
+    display: flex;
+    font-size: 15px;
+}
+
+header > ul > li{
+    list-style-type: none;
+    margin-left: 23px;
+}
+
+header > ul > li:last-child{
+    list-style-type: none;
+    background-color: #fd4900;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    right: 25px;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+
+#alternating-text{
+    font-size: 28px;
+    font-weight: bold;
+    color: #fd4900;
+}
+
+/*Fim Header*/
+
+.lider_cripto{
+    display: flex;
+}
