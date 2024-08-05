@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const texts = ["Taxas reduzidas!", "Novidades frescas", "Benefícios especiais!"];
+    const texts = ["Taxas reduzidas", "Investimentos planejados", "Benefícios especiais"];
     let currentIndex = 0;
 
     function changeText() {

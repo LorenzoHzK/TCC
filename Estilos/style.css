@@ -15,7 +15,7 @@ body{
 /*Header*/
 
 header{
-    height: 69px;
+    height: 70px;
     display: flex;
     margin: 0px;
     padding: 0px;
@@ -30,7 +30,7 @@ header{
 
 header > ul{
     display: flex;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 header > ul > li{
@@ -51,17 +51,97 @@ header > ul > li:last-child{
 header > ul > li > a{
     text-decoration: none;
     font-weight: bold;
-    color: rgb(63, 63, 63);
+    color: rgb(0, 0, 0);
+}
+
+/*Fim Header*/
+
+/*inicio lider_cripto*/
+.lider_cripto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+.lider_cripto  div  h1{
+    font-size: 4rem;
 }
 
 #alternating-text{
     font-size: 28px;
     font-weight: bold;
     color: #fd4900;
+    width: 830px;
 }
 
-/*Fim Header*/
+.lider_cripto div #alternating-text{
+    font-size: 4rem;
+}
 
-.lider_cripto{
+.lider_cripto div p{
+    font-size: 1.5rem;
+    margin-top: 50px;
+    letter-spacing: 0.2px;
+    color: #505050;
+}
+
+.lider_cripto input{
+    margin-top: 50px;
+    height: 20px;
+    width: 350px;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border-color: black;
+    border-style: solid;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 180px;
+    color: white;
+    background-color: #fd4900;
+    font-weight: 600;
+    font-size: 0.7rem;
+    border-style: none;
+}
+
+form [type="submit"]:hover{
+    cursor: pointer;
+}
+
+.lider_cripto > img{
+    width: 30%;
+    margin-left: 120px;
+}
+
+/*Fim lider_cripto*/
+
+
+/*inicio qualidades*/ 
+
+article.qualidades{
+    background-color:#d9d9d9;
+    height: 90vh;
+}
+
+.qualidades h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.qualidades p{
+    font-size: 1.2rem;
+    color: #505050;
+}
+
+.qualidades div{
+    background-color: #fff;
+    border: solid black 1px;
+    width: 20vw;
+}
+
+.homygod{
     display: flex;
 }
