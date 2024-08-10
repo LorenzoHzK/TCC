@@ -171,3 +171,40 @@ article.qualidades{
     font-size: 0.9rem;
     color: rgb(91, 97, 110, 1);
 }
+
+/*Inicio section2*/
+
+.section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 100px;
+}
+
+.section2 img{
+    width: 700px;
+}
+
+.section2 div{
+    width: 550px;
+}
+
+.section2 h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.section2 b{
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px;
+    color: rgb(64, 68, 77);
+}
+
+.section2 p{
+    margin-bottom: 10px;
+    color: rgb(91, 97, 110, 1)
+}
+
