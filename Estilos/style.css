@@ -208,3 +208,32 @@ article.qualidades{
     color: rgb(91, 97, 110, 1)
 }
 
+
+.section3{
+    background-color: #fd4900;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.section3 div{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    height: 10vh;
+}
+
+.section3 b{
+    font-size: 3rem;
+}
+
+.section3 p{
+    width: 250px;
+    font-size: 0.8rem;
+}
+
+.section3 hr{
+    border: 2px solid white;
+}
