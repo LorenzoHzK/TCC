@@ -24,34 +24,23 @@ header{
 }
 
 .logo{
-    height: 25px;
+    height: 45px;
     margin-left: 25px;
 }
 
-header > ul{
+header > .navbar{
     display: flex;
     font-size: 1rem;
-}
-
-header > ul > li{
-    list-style-type: none;
-    margin-left: 23px;
-}
-
-header > ul > li:last-child{
-    list-style-type: none;
-    background-color: #fd4900;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    right: 0;
-    right: 25px;
-}
-
-header > ul > li > a{
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 23px;
+    gap: 20px;
+
+}
+
+header > nav > a{
+    text-decoration: none;
     color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 /*Fim Header*/
