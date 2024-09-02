@@ -345,7 +345,7 @@ button {
 }
 
 .banner_main {
-     background: #0c0f38;
+     background: #FC9C00;
      background-size: 100% 100%;
      background-repeat: no-repeat;
      padding-bottom: 90px;
@@ -357,13 +357,6 @@ button {
      font-size: 60px;
      line-height: 80px;
      padding-bottom: 25px;
-     font-weight: bold;
-}
-
-.text-bg span {
-     color: #fdd430;
-     font-size: 40px;
-     line-height: 35px;
      font-weight: bold;
 }
 
@@ -397,6 +390,8 @@ button {
 
 .text-img figure img {
      width: 100%;
+     border-radius: 50px;
+     margin-left: 150px;
 }
 
 .titlepage {
@@ -509,12 +504,6 @@ button {
      padding: 40px;
      transition: ease-in all 0.5s;
      margin-bottom: 30px;
-}
-
-.Services .Services-box:hover {
-     background: #8308eb;
-     transition: ease-in all 0.5s;
-     cursor: pointer;
 }
 
 .Services .Services-box p {

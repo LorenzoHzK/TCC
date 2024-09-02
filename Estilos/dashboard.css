@@ -53,7 +53,7 @@ header > nav > a{
 }
 
 .painel {
-    max-width: 1500px;
+    max-width: 1700px;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,7 +62,7 @@ header > nav > a{
 
 .cartao {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center; 
@@ -94,13 +94,18 @@ header > nav > a{
     }
 }
 
+.transacoes_grafico{
+    display: flex;
+    align-items: flex-start
+}
+
 .historico-de-transacoes {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 600px;
     padding: 40px;
-    margin: 70px 0px 0px 200px;
+    margin: 40px 0px 0px 200px;
 }
 
 .historico-de-transacoes h2 {
@@ -147,4 +152,19 @@ header > nav > a{
 .transacao .valor {
     color: #4caf50;
     font-size: 14px;
+}
+
+.div_criptos{
+
+}
+
+.div_criptos{
+    padding: 20px;
+    display: flex;
+}
+
+th, td{
+    padding: 10px;
+    border: 0px;
+    border-bottom: solid black 1px;
 }
