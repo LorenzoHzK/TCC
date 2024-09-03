@@ -10,7 +10,7 @@ google.charts.load('current', {'packages':['corechart']});
           ['2007',  1030,      540]
         ]);
 
-        var options = {
+        var options = { 
           title: 'Transações Realizadas com sucesso',
           curveType: 'function',
           legend: { position: 'bottom' }
