@@ -8,6 +8,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Mercado de ações cripto</title>
 </head>
 <body>
@@ -17,11 +18,15 @@
 
         <nav class="navbar">
             <a href="dashboard.html">Dashboard</a>
-            <a href="">Mercado</a>
-            <a href="#">Negociações</a>
+            <a href="dashboard.html#mercado_acoes">Mercado</a>
+            <a href="dashboard.html#transacao">Negociações</a>
             <a href="vantangens.html">Vantagens</a>
             <a href="login.html">Acessar</a>
         </nav>
+        <div class="user-cart-icons">
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="./carteira.html"><i class="fas fa-wallet"></i></a>
+        </div>
     </header>
 
 
@@ -55,7 +60,7 @@
             <p class="valor-grande">Bitcoin (BTC)</p>
         </div>
     </div>
-
+    <h1 class="titulo_transacao" id="transacao"> Suas Transações </h1>
     <div class=transacoes_grafico>
         <div class="historico-de-transacoes">
             <h2>Últimas Transações</h2>
@@ -89,7 +94,7 @@
         <script src="../Scripts/grafico.js"></script>
     </div>
 
-    <h2>Criptomoedas Mais Vendidas</h2>
+    <h2 class="titulo_mercado" id="mercado_acoes">Mercado de Cripto moedas</h2>
     <div class="div_criptos">
     <div>
         <table border="1" id="crypto-table">

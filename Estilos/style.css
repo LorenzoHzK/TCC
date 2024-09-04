@@ -1,46 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Noto Sans", sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Montserrat", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-body{
-    font-family: "Noto Sans", sans-serif;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-/*Header*/
-
-header{
+header {
     height: 70px;
     display: flex;
-    margin: 0px;
-    padding: 0px;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
     border-bottom: 1px solid gainsboro;
+    background-color: #fff;
 }
 
-.logo{
+.logo {
     height: 45px;
-    margin-left: 25px;
 }
 
-header > .navbar{
+.navbar {
     display: flex;
     font-size: 1rem;
-    text-decoration: none;
-    margin-left: 23px;
     gap: 20px;
-
 }
 
-header > nav > a{
+.navbar a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: 600;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #fd4900;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fd4900;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.user-cart-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-cart-icons i {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-cart-icons i:hover {
+    color: #fd4900;
+    width: 100%;
 }
 
 /*Fim Header*/

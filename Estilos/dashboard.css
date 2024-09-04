@@ -1,168 +1,283 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Noto Sans", sans-serif;*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*font-family: "Montserrat", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-body{
-    font-family: "Noto Sans", sans-serif;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-/*Header*/
-
-header{
+header {
     height: 70px;
     display: flex;
-    margin: 0px;
-    padding: 0px;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
     border-bottom: 1px solid gainsboro;
+    background-color: #fff;
 }
 
-.logo{
+.logo {
     height: 45px;
-    margin-left: 25px;
 }
 
-header > .navbar{
+.navbar {
     display: flex;
     font-size: 1rem;
-    text-decoration: none;
-    margin-left: 23px;
     gap: 20px;
-
 }
 
-header > nav > a{
+.navbar a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: 600;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/*Fim Header*/
-
-
-.titulo-dashboard {
-    margin: 50px 0px 20px 70px;
-    font-weight: 500;
-    font-size: 1.4rem;
-}
-
-.painel {
-    max-width: 1700px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-}
-
-.cartao {
-    background: #fff;
-    border-radius: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center; 
-}
-
-.cartao h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.cartao p {
-    font-size: 1.2em;
-    margin-bottom: 0;
-}
-
-.cartao i {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.navbar a:hover {
     color: #fd4900;
 }
 
-.valor-grande {
-    font-size: 2em;
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fd4900;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
-@media(max-width: 768px) {
-    .painel {
-        grid-template-columns: 1fr;
-    }
+.navbar a:hover::after {
+    width: 100%;
 }
 
-.transacoes_grafico{
+.user-cart-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-cart-icons i {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-cart-icons i:hover {
+    color: #fd4900;
+    width: 100%;
+}
+
+.titulo-dashboard, .titulo_transacao, .titulo_mercado {
+    margin: 50px 70px 20px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #1f2937;
+    border-left: 5px solid #fd4900;
+    padding-left: 15px;
+}
+
+.painel {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.cartao {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cartao img {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+.cartao h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fd4900;
+}
+
+.cartao p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.transacoes_grafico {
     display: flex;
     align-items: flex-start;
-    background-color: #d9d9d9;
+    background-color: #ffffff;
     gap: 30px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 40px 70px;
+    flex-wrap: wrap;
 }
 
 .historico-de-transacoes {
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
-    padding: 40px;
-    margin: 40px 0px 0px 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
 }
 
 .historico-de-transacoes h2 {
     margin: 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.5rem;
-    font-weight: 600;
+    border-bottom: 2px solid #fd4900;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
 }
 
-/* Títulos das colunas */
 .titulos-das-transacoes {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 15px 0;
     font-weight: bold;
-    color: #333;
-    border-bottom: 1px solid #ddd;
-}
-
-.titulos-das-transacoes span {
-    font-size: 14px;
+    color: #1f2937;
 }
 
 .transacao {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
 }
 
 .transacao .data {
-    color: #555;
+    color: #777;
     font-size: 14px;
 }
 
 .transacao .cripto {
     color: #333;
-    font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .transacao .valor {
     color: #4caf50;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
-.div_criptos{
+.transacao .valor.negative {
+    color: #f44336;
+}
+
+.div_criptos {
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 70px;
 }
 
-th, td{
-    padding: 10px;
-    border: 0px;
-    border-bottom: solid black 1px;
+#crypto-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#crypto-table thead {
+    background-color: #fd4900;
+    color: #ffffff;
+}
+
+#crypto-table th, #crypto-table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+#crypto-table th {
+    font-weight: 600;
+}
+
+#crypto-table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+#crypto-table tbody tr:hover {
+    background-color: #fd4900;
+    color: #ffffff;
+}
+
+#crypto-table tbody tr:hover td {
+    color: #ffffff;
+}
+
+#chart_div, #curve_chart {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .painel {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .transacoes_grafico {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .historico-de-transacoes {
+        margin: 20px 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .div_criptos {
+        margin: 20px;
+        padding: 20px;
+    }
 }
