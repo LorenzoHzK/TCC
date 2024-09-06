@@ -20,10 +20,9 @@
             <a href="dashboard.html#mercado_acoes">Mercado</a>
             <a href="dashboard.html#transacao">Negociações</a>
             <a href="vantangens.html">Vantagens</a>
-            <a href="login.html">Acessar</a>
         </nav>
         <div class="user-cart-icons">
-            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="login.html"><i class="fas fa-user"></i></a>
             <a href="./carteira.html"><i class="fas fa-wallet"></i></a>
         </div>
     </header>
@@ -58,7 +57,7 @@
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">Ou use E-mail para realizar o login</p>
-                <form class="form">
+                <form action="../Php/insert_usuarios.php" method="post" class="form">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
                         <input type="text" placeholder="Nome">
@@ -108,8 +107,7 @@
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">Ou use E-mail para realizar o login</p>
-                <form class="form">
-                
+                <form action="../Php/login.php" method="post" class="form">             
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" placeholder="Email">
@@ -121,7 +119,7 @@
                     </label>
                 
                     <a class="password" href="#">Esqueceu sua senha?</a>
-                    <button class="btn btn-second">Entrar</button>
+                    <button class="btn btn-second" type="submit">Entrar</button>
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
