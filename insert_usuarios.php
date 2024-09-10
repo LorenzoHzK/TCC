@@ -6,7 +6,7 @@
     echo $instrucao;
     $executar = mysqli_query($conexao, $instrucao);
     if ($executar==1){  
-        header('location:../Cripto_Galaxy/dashboard.html');
+        header('location:index.html');
     }
     else{
         echo "Erro!";
