@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Metadados e links de CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,12 +9,15 @@
     <link rel="stylesheet" href="./Estilos/login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <!-- Cabeçalho com logo e navegação -->
     <header>
-        <a href="index.html"><img class="logo" src="./Imagens/logo/Crypto Galaxy - Logo.png" alt="Imagem não Carregada"></a>
+        <a href="index.html">
+            <img class="logo" src="./Imagens/logo/Crypto Galaxy - Logo.png" alt="Imagem não Carregada">
+        </a>
 
         <nav class="navbar">
             <a href="dashboard.html">Dashboard</a>
@@ -27,35 +31,36 @@
         </div>
     </header>
 
+    <!-- Container principal com os formulários de login e criação de conta -->
     <div class="container">
+        <!-- Primeiro conteúdo: mensagem de boas-vindas -->
         <div class="content first-content">
             <div class="first-column">
                 <h2 class="title title-primary">Bem vindo de Volta</h2>
                 <p class="description description-primary">Mantenha-se conectado conosco</p>
                 <p class="description description-primary">Por favor, faça login com suas informações pessoais</p>
                 <button id="signin" class="btn btn-primary">Entrar</button>
-            </div>    
+            </div>
             <div class="second-column">
                 <h2 class="title title-second">Criar conta</h2>
                 <p class="description description-second">Ou use E-mail para realizar o login</p>
+
+                <!-- Formulário de criação de conta -->
                 <form action="insert_usuarios.php" method="post" class="form">
-                    
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="text" placeholder="email" name="email">
                     </label>
-                    
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="text" type="password" placeholder="senha" name="senha">
+                        <input type="password" placeholder="senha" name="senha">
                     </label>
-                    
-                    
-                    <button class="btn btn-second" type="submit">Entrar</button>        
+                    <button class="btn btn-second" type="submit">Entrar</button>
                 </form>
-                
             </div><!-- second column -->
         </div><!-- first content -->
+
+        <!-- Segundo conteúdo: área para login com opção de login de administrador -->
         <div class="content second-content">
             <div class="first-column">
                 <h2 class="title title-primary">Olá, Investidor</h2>
@@ -67,25 +72,46 @@
                 <h2 class="title title-second">Continue</h2>
                 <p class="description description-second">Ou use E-mail para realizar o login</p>
 
-                <!-- Formulário -->
+                <!-- Formulário de login -->
                 <form action="login.php" method="post" class="form">
-                
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="text" placeholder="email" name="email">
                     </label>
-                
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha" name="senha" type="text">
+                        <input type="password" placeholder="Senha" name="senha">
                     </label>
-                
                     <a class="password" href="#">Esqueceu sua senha?</a>
                     <button class="btn btn-second" type="submit">Entrar</button>
+
+                    <!-- Botão para abrir o modal de login de administrador -->
+                    <a href="#" id="loginAdministradorBtn" style="color:  #fff;" class="btn btn-segundo">Administrador</a>
+
+                    <!-- Modal de login de administrador -->
+                    <div id="loginAdministradorModal" class="modal">
+                        <div class="conteudo-modal" style="z-index: 99;">
+                            <span class="fechar">&times;</span>
+                            <h2>Login de Administrador</h2>
+                            <form action="login_administrador.php" method="post" class="formulario">
+                                <label class="rotulo-entrada" for="emailAdministrador">
+                                    <i class="far fa-envelope icone-modificar"></i>
+                                    <input type="text" placeholder="Email" id="emailAdministrador" name="email_administrador" required>
+                                </label>
+                                <label class="rotulo-entrada" for="senhaAdministrador">
+                                    <i class="fas fa-lock icone-modificar"></i>
+                                    <input type="password" placeholder="Senha" id="senhaAdministrador" name="senha_administrador" required>
+                                </label>
+                                <button class="btn btn-segundo" type="submit">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
                 </form>
             </div><!-- second column -->
         </div><!-- second-content -->
     </div>
+
+    <!-- JavaScript para o comportamento do modal e transições -->
     <script src="./Scripts/login.js"></script>
 </body>
 </html>

@@ -111,8 +111,6 @@ header {
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
-
     left: 0;
 }
 .title {
@@ -285,7 +283,7 @@ input:-webkit-autofill
     border-bottom-right-radius: 15px;
     animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
 
-    z-index: 12;
+    z-index: 1;
 }
 
 .sign-up-js .content::before {
@@ -592,4 +590,82 @@ input:-webkit-autofill
     .form {
         width: 100%;
     }
+}
+
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Leve escuridão no fundo */
+}
+
+.conteudo-modal {
+    background-color: #fff;
+    margin: 10% auto; /* Margem para centralizar verticalmente */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px; /* Máximo de largura para o modal */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+    position: relative; /* Para posicionar o botão de fechar */
+}
+
+.fechar {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: #007bff; /* Cor ao passar o mouse */
+    text-decoration: none;
+}
+
+h2 {
+    margin-top: 0; /* Remove margem superior do título */
+    color: #333;
+}
+
+.formulario label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.icone-modificar {
+    margin-right: 10px;
+}
+
+.btn-segundo {
+    background: #fd4900; /* Cor de fundo do botão */
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 10px;
+    transition: background-color .5s;
+}
+
+.btn-segundo:hover {
+    background-color: #ff6021; /* Cor ao passar o mouse */
 }
