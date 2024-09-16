@@ -1,9 +1,9 @@
 <?php
 session_start();
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$email = $_POST['email_administrador'];
+$senha = $_POST['senha_administrador'];
 $conexao = mysqli_connect('localhost','root','','crypto_galaxy');
-$sql = "SELECT * FROM clientes WHERE email like '$email'
+$sql = "SELECT * FROM administrador WHERE email like '$email'
 and senha like '$senha'";
 $executar = mysqli_query($conexao, $sql);
 $res = mysqli_fetch_array($executar);
@@ -14,7 +14,7 @@ if($res['email'] != NULL){
 }
 else{
    echo "Login e/ou senha incorretos";
-   echo "<a href='login.html'> Voltar para o login</a>";
 }
+echo $sql;
 $fechar = mysqli_close($conexao);
 ?>

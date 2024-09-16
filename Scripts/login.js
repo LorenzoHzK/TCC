@@ -1,35 +1,28 @@
-// Script para gerenciar a transição entre login e criação de conta
-var btnSignin = document.querySelector("#signin");
-var btnSignup = document.querySelector("#signup");
+var formSignin = document.querySelector('#signin');
+var formSignup = document.querySelector('#signup');
+var formAdmin = document.querySelector('#admin'); // Novo formulário para login administrativo
+var btnColor = document.querySelector('.btnColor');
 
-var body = document.querySelector("body");
-
-btnSignin.addEventListener("click", function () {
-   body.className = "sign-in-js"; 
+// Adiciona um ouvinte de eventos para o botão de login
+document.querySelector('#btnSignin').addEventListener('click', () => {
+    formSignin.style.left = "25px";
+    formSignup.style.left = "450px";
+    formAdmin.style.left = "900px"; // Ajuste conforme necessário
+    btnColor.style.left = "0px";
 });
 
-btnSignup.addEventListener("click", function () {
-    body.className = "sign-up-js";
+// Adiciona um ouvinte de eventos para o botão de cadastro
+document.querySelector('#btnSignup').addEventListener('click', () => {
+    formSignin.style.left = "-450px";
+    formSignup.style.left = "25px";
+    formAdmin.style.left = "900px"; // Ajuste conforme necessário
+    btnColor.style.left = "110px";
 });
 
-// Script para gerenciar o modal de login de administrador
-var modal = document.getElementById("loginAdministradorModal");
-var btn = document.getElementById("loginAdministradorBtn");
-var span = document.getElementsByClassName("fechar")[0];
-
-// Quando o botão de login de administrador for clicado, o modal aparece
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// Quando o usuário clicar no "X", o modal fecha
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// Se o usuário clicar fora do modal, ele fecha
-window.onclick = function(evento) {
-  if (evento.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// Adiciona um ouvinte de eventos para o botão de login administrativo
+document.querySelector('#btnAdmin').addEventListener('click', () => {
+    formSignin.style.left = "-900px"; // Ajuste conforme necessário
+    formSignup.style.left = "900px"; // Ajuste conforme necessário
+    formAdmin.style.left = "25px";
+    btnColor.style.left = "220px"; // Ajuste conforme necessário
+});
