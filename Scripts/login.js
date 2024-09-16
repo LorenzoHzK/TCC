@@ -16,7 +16,7 @@ document.querySelector('#btnSignup').addEventListener('click', () => {
     formSignin.style.left = "-450px";
     formSignup.style.left = "25px";
     formAdmin.style.left = "900px"; // Ajuste conforme necessário
-    btnColor.style.left = "110px";
+    btnColor.style.left = "90px";
 });
 
 // Adiciona um ouvinte de eventos para o botão de login administrativo
@@ -24,5 +24,5 @@ document.querySelector('#btnAdmin').addEventListener('click', () => {
     formSignin.style.left = "-900px"; // Ajuste conforme necessário
     formSignup.style.left = "900px"; // Ajuste conforme necessário
     formAdmin.style.left = "25px";
-    btnColor.style.left = "220px"; // Ajuste conforme necessário
+    btnColor.style.left = "190px"; // Ajuste conforme necessário
 });

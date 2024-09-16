@@ -24,7 +24,7 @@ body {
 .container {
     background-color: whitesmoke;
     padding: 6px;
-    width: 350px;
+    width: 450px;
     height: 450px;
     display: flex;
     flex-direction: column;
@@ -39,14 +39,14 @@ form {
     position: absolute;
     margin-top: 80px;
     transition: left 0.5s;
-    width: 300px;
+    width: 400px;
     height: 400px;
 }
 
 .buttonsForm {
     margin-top: 40px;
     position: relative;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0 0 7px 0 #fd4900;
 }
 
@@ -60,10 +60,10 @@ form {
 
 .btnColor {
     position: absolute;
-    width: 115px;
+    width: 90px;
     height: 100%;
     background: linear-gradient(to right, #fd4900, #fd48008f);
-    border-radius: 30px;
+    border-radius: 10px;
     transition: left 0.5s;
 }
 
@@ -71,7 +71,7 @@ input[type="text"], input[type="password"] {
     border: none;
     margin-top: 40px;
     border-radius: 60px;
-    padding: 8px 0 8px 35px;
+    padding: 12px 0 12px 35px;
     outline: none;
     width: 100%;
 }
@@ -84,7 +84,7 @@ button[type="submit"] {
     border: none;
     outline: none;
     padding: 8px 0 8px 15px;
-    font-size: 15px;
+    font-size: 1rem;
     margin-top: 40px;
     cursor: pointer;
 }
@@ -92,7 +92,7 @@ button[type="submit"] {
 .divCheck {
     margin: 10px 0 0 5px;
     width: 80%;
-    font-size: 13px;
+    font-size: 1rem;
 }
 
 #signin {
