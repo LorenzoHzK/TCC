@@ -8,7 +8,7 @@ and senha like '$senha'";
 $executar = mysqli_query($conexao, $sql);
 $res = mysqli_fetch_array($executar);
 if($res['email'] != NULL){
-   $_SESSION['senha'] = $res['email'];
+   $_SESSION['email'] = $res['email'];
    $_SESSION['senha'] = $res['senha'];
    header("location:index.html");
 }

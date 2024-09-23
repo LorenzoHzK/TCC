@@ -1,3 +1,7 @@
+<?php
+include 'autenticacao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

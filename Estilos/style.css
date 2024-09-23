@@ -279,8 +279,7 @@ article.qualidades{
 
 /* O conteúdo do dropdown fica oculto por padrão */
 .dropdown-content {
-    display: none;
-    position: absolute;
+    display: flex;
     top: 40px; /* Ajusta a distância do ícone */
     left: 0;
     background-color: white;

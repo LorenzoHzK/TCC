@@ -1,3 +1,7 @@
+<?php
+include 'autenticacao.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,7 +27,7 @@
         </nav>
         <div class="user-cart-icons">
             <a href="login.html"><i class="fas fa-user"></i></a>
-            <a href="./carteira.html"><i class="fas fa-wallet"></i></a>
+            <a href="carteira.php"><i class="fas fa-wallet"></i></a>
         </div>
     </header>
 
@@ -110,6 +114,5 @@
     <div id="chart_div" style="width: 1000px; height: 600px;"></div>
     <script src="./Scripts/grafico_2.js"></script>
     </div>
-
 </body>
 </html>
