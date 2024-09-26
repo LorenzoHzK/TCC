@@ -10,9 +10,12 @@ while($res = mysqli_fetch_array($exe)){
 	$nome = $res['nome'];
 	$valor = $res['valor'];
 	$foto = $res['foto'];
-	echo "<div><img width='50px' src='Imagens/icon_moedas/$foto'>
-	Produto: $nome Preço: $valor 
-	<a href='add_carrinho.php?id=$id'>Função não adicionada</a></div>";
+	echo "<div>
+	<img width='50px' src='Imagens/icon_moedas/$foto'>
+	Produto: $nome Preço: $valor
+	<br><a href='del_cripto.php?id=$id'>Excluir</a>
+	<br><a href='upd_cripto.php?id=$id'>atualizar</a>
+	</div>";
 }
 $fecha = mysqli_close($con);
 ?>
