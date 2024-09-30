@@ -1,5 +1,6 @@
 <?php
 include 'autenticacao.php';
+include 'header.html';
 ?>
 
 <!DOCTYPE html>
@@ -10,26 +11,9 @@ include 'autenticacao.php';
     <link rel="stylesheet" href="./Estilos/carteira.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="./Imagens/logo/favicon.ico" type="image/x-icon">
-    <title>Carteira | Crypto Galaxy</title>
+    <title>Carteira - Crypto Galaxy</title>
 </head>
 <body>
-
-    <header>
-        <a href="index.html"><img class="logo" src="./Imagens/logo/Crypto Galaxy - Logo.png" alt="Imagem não Carregada"></a>
-
-        <nav class="navbar">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="dashboard.html#mercado_acoes">Mercado</a>
-            <a href="dashboard.html#transacao">Negociações</a>
-            <a href="vantangens.html">Vantagens</a>
-        </nav>
-        
-        <div class="user-cart-icons">
-            <a href="login.html"><i class="fas fa-user"></i></a>
-            <a href="./carteira.html"><i class="fas fa-wallet"></i></a>
-        </div>
-    </header>
-
     <main>
         <h1 class="titulo">Sua Carteira</h1>
 

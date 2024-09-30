@@ -10,7 +10,7 @@ $res = mysqli_fetch_array($executar);
 if($res['email'] != NULL){
    $_SESSION['email'] = $res['email'];
    $_SESSION['senha'] = $res['senha'];
-   header("location:index.html");
+   header("location:dashboard.php");
 }
 else{
    echo "Login e/ou senha incorretos";

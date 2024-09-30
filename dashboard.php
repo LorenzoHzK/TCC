@@ -1,5 +1,6 @@
 <?php
 include 'autenticacao.php';
+include 'header.html';
 ?>
 
 <!DOCTYPE html>
@@ -16,21 +17,6 @@ include 'autenticacao.php';
     <title>Mercado de ações cripto</title>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img class="logo" src="./Imagens/logo/Crypto Galaxy - Logo.png" alt="Imagem não Carregada"></a>
-
-        <nav class="navbar">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="dashboard.html#mercado_acoes">Mercado</a>
-            <a href="dashboard.html#transacao">Negociações</a>
-            <a href="vantangens.html">Vantagens</a>
-        </nav>
-        <div class="user-cart-icons">
-            <a href="login.html"><i class="fas fa-user"></i></a>
-            <a href="carteira.php"><i class="fas fa-wallet"></i></a>
-        </div>
-    </header>
-
 
     <h1 class="titulo-dashboard">Sua Dashboard</h1>
     <div class="painel">

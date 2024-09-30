@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Estilo do cabeçalhho (header) */
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  border-bottom: 1px solid gainsboro;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo a img {
+  height: 45px;
+}
+
+.links-navegacao {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links-navegacao li {
+  position: relative;
+}
+
+.links-navegacao li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+}
+
+.links-navegacao li a:hover {
+  color: #fd4900;
+}
+
+/* Dropdown oculto por padrão */
+.links-navegacao li ul {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-navegacao li:hover ul {
+  display: block;
+}
+
+.links-navegacao li ul li {
+  width: 150px;
+  display: block;
+}
+
+/* Estilo para os ícones lado a lado */
+.icones {
+  display: flex;
+  align-items: center;
+}
+
+.icones a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+  display: block;
+  margin-left: 15px;
+}
+
+.icones a:hover {
+  color: #fd4900;
+}
+
+/* Ícone do carrinho sem dropdown */
+.icone-carrinho {
+  display: flex;
+}
+
+/* Estilo do ícone do usuário com dropdown */
+.icone-usuario {
+  position: relative;
+  display: flex;
+}
+
+.icone-usuario ul {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icone-usuario:hover ul {
+  display: block;
+}
+
+.icone-usuario ul li {
+  width: 150px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.icone-usuario ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.icone-usuario ul li a:hover {
+  color: #fd4900;
+}

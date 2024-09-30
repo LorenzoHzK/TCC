@@ -1,3 +1,6 @@
+<?php
+include 'header.html';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,37 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <a href="index.html"><img class="logo" src="Imagens/logo/Crypto Galaxy - Logo.png" alt="Imagem não Carregada"></a>
-
-        <nav class="navbar">
-            <a href="dashboard.php">Dashboard</a>
-            <a href="dashboard.php#mercado_acoes">Mercado</a>
-            <a href="dashboard.php#transacao">Negociações</a>
-            <a href="vantangens.html">Vantagens</a>
-        </nav>
-
-        <div class="user-cart-icons">
-            <div class="user-dropdown">
-                <a href="login.html"><i class="fas fa-user"></i></a>
-                <div class="dropdown-content">
-                    <a href="logout.php">Logout</a>
-                    <a href="carteira.php">carteira<i class="fas fa-wallet"></i></a>
-                </div>
-            </div>
-        </div>
-        <script src="./Scripts/index.js"></script>
-    </header>
-
 <!-- DIV CONTEÚDO DE ENTRADA -->
     <div class="lider_cripto">
         <div>
             <h1 id="alternating-text">Feito!</h1>
             <h1>para você!!</h1>
             <p>Ofertas especiais para novos clientes! <br> Explore as melhores oportunidades de investimento!</p>
-            <form action="./Cripto_Galaxy/login.html">
-                <input type="submit" value="ABRA SUA CONTA GRÁTIS">
+            <form action="login.html">
+                <input type="submit" value="CONTA GRATUITA">
             </form>
         </div>
         <img src="Imagens/Imagens/DeWatermark.ai_1722798465891.png" alt="Imagem não carregada">

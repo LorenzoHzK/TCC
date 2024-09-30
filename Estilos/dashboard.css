@@ -13,54 +13,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 25px;
-    border-bottom: 1px solid gainsboro;
-    background-color: #fff;
-}
-
-.logo {
-    height: 45px;
-}
-
-.navbar {
-    display: flex;
-    font-size: 1rem;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-    padding: 10px 0;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #fd4900;
-}
-
-.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fd4900;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
 .user-cart-icons {
     display: flex;
     align-items: center;
