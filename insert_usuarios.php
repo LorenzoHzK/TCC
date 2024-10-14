@@ -6,7 +6,7 @@
     echo $instrucao;
     $executar = mysqli_query($conexao, $instrucao);
     if ($executar==1){  
-        header('location:index.html');
+        header('location:index.php');
     }
     else{
         echo "Erro!";
