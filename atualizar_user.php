@@ -15,7 +15,7 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] == UPLOAD_ERR_OK) {
     $extensao = pathinfo($_FILES['foto']['name'], PATHINFO_EXTENSION);
     $novo_nome = uniqid() . '.' . $extensao;
     move_uploaded_file($_FILES['foto']['tmp_name'], $diretorio . $novo_nome);
-    $foto = $novo_nome;
+    $foto = $novo_nome; 
 }
 
 // Monta a query de atualização

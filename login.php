@@ -10,6 +10,7 @@ $res = mysqli_fetch_array($executar);
 if($res['email'] != NULL){
    $_SESSION['email'] = $res['email'];
    $_SESSION['senha'] = $res['senha'];
+   $_SESSION['id_cli'] = $res['id_cli'];
    header("location:dashboard.php");
 }
 else{
@@ -17,4 +18,4 @@ else{
    echo "<a href='login.html'> Voltar para o login</a>";
 }
 $fechar = mysqli_close($conexao);
-?>
+?> 

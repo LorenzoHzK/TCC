@@ -105,28 +105,18 @@ $resultado = mysqli_query($conexao, $sql);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // Verifica se há resultados e preenche a tabela
-                    if ($resultado && mysqli_num_rows($resultado) > 0) {
-                        while ($row = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>
-                                    <td>{$row['nome']}</td>
-                                    <td>{$row['valor']}</td>
-                                    <td>{$row['quant']}</td>
-                                    <td>
-                                        <form action='comprar.php' method='POST'>
-                                            <input type='hidden' name='nome' value='{$row['nome']}'>
-                                            <input type='hidden' name='valor' value='{$row['valor']}'>
-                                            <input type='hidden' name='quant' value='{$row['quant']}'>
-                                            <button type='submit'>Comprar</button>
-                                        </form>
-                                    </td>
-                                  </tr>";
-                        }
-                    } else {
-                        echo "<tr><td colspan='4'>Nenhuma criptomoeda encontrada.</td></tr>";
-                    }
-                    ?>
+                <?php
+                $con = mysqli_connect('localhost','root', '', 'crypto_galaxy');
+                $sql = "select * from criptos order by nome asc";
+                $exe = mysqli_query($con, $sql);
+                while($res = mysqli_fetch_array($exe)){
+                    $id = $res['id'];
+                    $nome = $res['nome'];
+                    $valor = $res['valor'];
+                    echo "<div>Produto: $nome Preço: $valor <a href='add_carrinho.php?id=$id'>Comprar</a></div>";
+                }
+                $fecha = mysqli_close($con);
+                ?>
                 </tbody>
             </table>
         </div>
