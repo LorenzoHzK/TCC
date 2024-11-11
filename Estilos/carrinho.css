@@ -1,0 +1,92 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo geral da página */
+body {
+    background-color: #f9f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal do carrinho */
+.cart-container {
+    background-color: #fff;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Estilo de cada item no carrinho */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Nome e preço do produto */
+.cart-item-name {
+    font-size: 16px;
+    color: #333;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fd4900; /* cor de destaque */
+}
+
+/* Link para remover produto */
+.remove-link {
+    font-size: 14px;
+    color: #fd4900;
+    text-decoration: none;
+}
+
+.remove-link:hover {
+    text-decoration: underline;
+}
+
+/* Total do carrinho */
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Link para continuar comprando */
+.continue-shopping {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fd4900;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.continue-shopping:hover {
+    background-color: #e04000;
+}

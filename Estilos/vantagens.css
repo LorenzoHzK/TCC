@@ -1,100 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-
-/* Estilos Globais */
+/* Reset e Configurações Básicas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
 }
 
-/* Links e Botões */
+/* Links */
 a {
-    color: #222222;
+    color: #ffffff;
     text-decoration: none;
-    outline: none;
-    transition: all .3s ease-in-out;
-}
-
-button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
-/* Tipografia */
-h1, h2, h3, h4, h5, h6 {
-    color: #111111;
-    margin: 0;
-    padding: 0 0 10px 0;
-    font-weight: normal;
-}
-
-h1 { font-size: 24px; }
-h2 { font-size: 22px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
-h5 { font-size: 14px; }
-h6 { font-size: 13px; }
-
-/* Imagens */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Classes de Layout */
-.full {
-    width: 100%;
-    float: left;
-}
-
-.layout_padding {
-    padding: 90px 0;
-}
-
-.light_silver {
-    background: #f9f9f9;
-}
-
-/* Navegação */
-.navegacao.navbar {
-    float: right;
-}
-
-.navegacao.navbar-dark .navbar-nav .nav-link {
-    padding: 0 25px;
-    color: #fff;
-    font-size: 16px;
-}
-
-/* Cabeçalho e Banner */
-.banner_principal {
-    background: #FC9C00;
-    padding: 90px 0;
-    display: flex;
-}
-
-.texto-bg h1 {
-    color: #fff;
-    font-size: 60px;
     font-weight: bold;
 }
 
-/* Seções de Serviços e Por Que */
-.servicos {
-    margin-top: 90px;
-    padding: 60px 0;
-    background: #fd4900;
+a:hover {
+    color: #ffb366;
 }
 
-/* Estilizações adicionais podem ser feitas aqui */
+/* Contêiner Global */
+/* Banner Principal */
+section {
+    background-color: #fd4900;
+    color: #fff;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+section > div {
+    display: flex;
+    flex: 1;
+}
+
+section > div > div:first-child {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section > div > div:last-child {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+section a {
+    max-width: 250px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section a:hover {
+    background-color: #333333c7;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Seção de Hospedagem */
+div:nth-of-type(2) {
+    padding: 60px 0;
+    text-align: center;
+}
+
+div:nth-of-type(2) h2 {
+    color: #fd4900;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+div:nth-of-type(2) p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+/* Seção de Serviços */
+#servicos {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 2.5rem;
+    color: #fd4900;
+    margin-bottom: 15px;
+}
+
+#servicos p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#servicos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+#servicos .row > div {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#servicos .row > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#servicos h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+#servicos p {
+    color: #777;
+}
+
+#servicos i img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* Seção Final - Sobre */
+#porque {
+    background-color: #fd4900;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#porque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#porque p {
+    font-size: 1.2rem;
+    color: #ffe6d5;
+    max-width: 600px;
+    margin: auto;
+}
