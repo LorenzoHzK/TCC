@@ -17,9 +17,7 @@
             <p>A Crypto Galaxy oferece a melhor plataforma para comprar e vender criptomoedas com facilidade e segurança.</p>
             <a href="#vantagens">Explore Agora</a>
         </div>
-        <div>
-            <img src="./Imagens/pagina vantangens - imagens/image-backgorund.png" alt="Imagem de Fundo" />
-        </div>
+        <img src="./Imagens/pagina vantangens - imagens/image-backgorund.png" alt="Imagem de Fundo" />
     </div>
 </section>
 
@@ -41,7 +39,6 @@
         <div>
             <div>
                 <h2 id="vantagens">Por que escolher a Crypto Galaxy?</h2>
-                <p>Descubra os principais benefícios da Crypto Galaxy.</p>
             </div>
             <div>
                 <div>

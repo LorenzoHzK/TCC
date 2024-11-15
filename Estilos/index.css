@@ -15,74 +15,6 @@ body {
     line-height: 1.6;
 }
 
-header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 25px;
-    border-bottom: 1px solid gainsboro;
-    background-color: #fff;
-}
-
-.logo {
-    height: 45px;
-}
-
-.navbar {
-    display: flex;
-    font-size: 1rem;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-    padding: 10px 0;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: #fd4900;
-}
-
-.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fd4900;
-    bottom: -5px;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
-.user-cart-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.user-cart-icons i {
-    font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.user-cart-icons i:hover {
-    color: #fd4900;
-    width: 100%;
-}
-
-/*Fim Header*/
-
 /*inicio lider_cripto*/
 .lider_cripto{
     display: flex;
@@ -149,7 +81,7 @@ form [type="submit"]:hover{
 
 article.qualidades{
     background-color:#d9d9d9;
-    height: 80vh;
+    height: 90vh;
 }
 
 .qualidades .section1 h2{

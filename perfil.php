@@ -15,7 +15,7 @@ $exe = mysqli_query($con, $sql);
 if ($res = mysqli_fetch_array($exe)) {
     $id = $res['id_cli'];
     $nome = $res['nome'];
-    $foto = $res['foto'];
+    $foto = $res['foto'] ? $res['foto'] : 'default.png'; // Nome da imagem padrão
 } else {
     echo "Usuário não encontrado.";
     exit;
