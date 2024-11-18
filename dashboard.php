@@ -53,7 +53,7 @@ $resultado = mysqli_query($conexao, $sql);
     </div>
 
     <div class="titulo_transacao">
-        <h2>Histórico de Transações</h2>
+        <h2>Todas as Cripto moedas</h2>
     </div>
     <div class="historico-de-transacoes">
         <div class="titulos-das-transacoes">

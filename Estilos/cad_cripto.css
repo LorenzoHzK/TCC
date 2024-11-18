@@ -1,64 +1,97 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilo da página */
-  body {
-    background-color: #f5f5f5;
-  }
-  
-  /* Estilo do container do formulário */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo da página */
+body {
+  background-color: #f5f5f5;
+  /* Removi as propriedades flex no body que estavam interferindo em outros elementos */
+}
+
+/* Estilo do container do formulário */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px; /* Aumentei o arredondamento */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  margin: 50px auto 0; /* Adicionado espaço no topo (50px) */
+}
+
+/* Estilo dos rótulos e campos de input */
+form input[type="text"],
+form input[type="file"],
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 15px; /* Aumentei o arredondamento */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Efeito de foco para inputs */
+form input[type="text"]:focus,
+form input[type="file"]:focus,
+form select:focus {
+  border-color: #fd4900;
+  outline: none;
+}
+
+/* Botão de submit */
+form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #fd4900;
+  color: white;
+  border: none;
+  border-radius: 15px; /* Aumentei o arredondamento */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efeito de hover e active no botão */
+form input[type="submit"]:hover {
+  background-color: #e04100;
+  transform: scale(1.05);
+}
+
+form input[type="submit"]:active {
+  background-color: #c13d00;
+}
+
+/* Estilo geral do texto */
+form label,
+form option {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilo para o campo de select */
+form select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 15px; /* Aumentei o arredondamento */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
   form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    align-items: center;
+      padding: 15px;
   }
-  
-  /* Estilo dos rótulos e campos de input */
-  form input[type="text"],
-  form input[type="file"],
-  form select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  /* Botão de submit */
+
   form input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #fd4900;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+      font-size: 16px;
   }
-  
-  form input[type="submit"]:hover {
-    background-color: #e04100;
-  }
-  
-  /* Estilo geral do texto */
-  form label,
-  form option {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  form option {
-    padding: 5px 0;
-  }
-  
+}
