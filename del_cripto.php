@@ -1,21 +1,30 @@
 <?php
 include('autenticacao.php');
-$id = $_GET['id'];
-$conexao = mysqli_connect
-('localhost','root','','crypto_galaxy');
-$sql = "select foto from criptos where id=$id";
-$exe = mysqli_query($conexao,$sql);
-$res = mysqli_fetch_array($exe);
-$foto = $res['foto'];
-$sql = "DELETE FROM criptos WHERE id=$id";
-$executar = mysqli_query($conexao,$sql);
-if($executar == 1){
-	//echo $foto;
-	unlink("CImagens\icon_moedas");
-    header('location:ver_cripto.php');
+$email = $_SESSION['email'];
+$conexao = mysqli_connect('localhost', 'root', '', 'crypto_galaxy');
+
+// Verifica se o parâmetro 'remove_all' foi passado
+if (isset($_GET['remove_all']) && $_GET['remove_all'] == 'true') {
+    $sql = "DELETE FROM carrinho WHERE email = '$email'";
+    $executar = mysqli_query($conexao, $sql);
+    
+    if ($executar) {
+        echo "Todos os itens foram removidos do carrinho!";
+    } else {
+        echo "Ocorreu um erro ao tentar remover os itens!";
+    }
+} else {
+    // Caso o ID de um item específico seja passado, removê-lo
+    $id = $_GET['id'];
+    $sql = "DELETE FROM carrinho WHERE id_car = $id";
+    $executar = mysqli_query($conexao, $sql);
+    
+    if ($executar) {
+        echo "Item removido com sucesso!";
+    } else {
+        echo "Erro ao remover item!";
+    }
 }
-else{
-    echo "Erro!";
-}
-$fechar = mysqli_close($conexao);
+
+header('Location: carrinho.php'); // Redireciona para o carrinho após a operação
 ?>

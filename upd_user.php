@@ -25,12 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Verifica se há uma foto enviada
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
-        $diretorioUploads = 'uploads/';
-        
-        // Cria o diretório 'uploads' se não existir
-        if (!is_dir($diretorioUploads)) {
-            mkdir($diretorioUploads, 0777, true);
-        }
+        $diretorioUploads = 'fotos/';
         
         $foto = $diretorioUploads . basename($_FILES['foto']['name']);
         
