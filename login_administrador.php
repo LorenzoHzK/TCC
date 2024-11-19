@@ -10,7 +10,7 @@ $res = mysqli_fetch_array($executar);
 if($res['email'] != NULL){
    $_SESSION['email'] = $res['email'];
    $_SESSION['senha'] = $res['senha'];
-   header("location:index.php");
+   header("location:http://localhost/TCC/");
 }
 else{
    echo "Login e/ou senha incorretos";

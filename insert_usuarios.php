@@ -7,6 +7,7 @@
     $executar = mysqli_query($conexao, $instrucao);
     if ($executar==1){  
         header('location:login.php');
+        echo "Cadastrado com sucesso";
     }
     else{
         echo "Erro!";
